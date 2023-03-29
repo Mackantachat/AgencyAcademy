@@ -1,0 +1,175 @@
+@import "./style/main.scss";
+
+.full-page {
+    // min-height: 100vh;
+    // min-height: fill-available;
+    padding-bottom: 155px;
+    position: relative;
+}
+
+.max-full-page {
+    padding-bottom: 220px;
+    position: relative;
+}
+
+.page {
+    padding-top: $header-height;
+}
+
+.footer-content {
+    background-color: $white;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 1.5rem;
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+    padding-top: 1.5rem;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+    &:before {
+        content: "";
+        background-color: $white;
+        background: linear-gradient(180deg, rgba($white, 0) 0%, rgba($white, 1) 75%);
+        display: block;
+        height: 1.5rem;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translateY(-100%);
+        width: 100%;
+    }
+    &.book {
+        background-color: $white;
+        background: linear-gradient(180deg, rgba($white, 1) 0%, rgba($secondary, 1) 100%);
+    }
+}
+
+.invalid-feedback {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23dc3545' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cline x1='12' y1='16' x2='12' y2='16'/%3E%3C/svg%3E%0A");
+    background-position: left top 0.25rem;
+    background-repeat: no-repeat;
+    background-size: 0.8rem;
+    padding-left: 1.2rem;
+}
+
+.toggle-eye {
+    background-color: transparent;
+    border: none;
+    padding: 0.375rem 0.75rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.input-group {
+    & ~ .invalid-feedback {
+        display: block;
+    }
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    .swiper-pagination-bullet {
+        background-color: $secondary;
+        border-radius: 50%;
+        display: block;
+        height: 1rem;
+        margin: 1rem 0.25rem;
+        width: 1rem;
+        transition: all 0.3s ease-in-out;
+        &.swiper-pagination-bullet-active {
+            background-color: $primary;
+        }
+    }
+}
+
+.qrcode-contains {
+    max-width: 400px;
+    .qr-header {
+        background-color: #113566;
+        background-image: url("#{$image-path}/thai-qr-banner.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: auto 4rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+        height: 4rem;
+        overflow: hidden;
+        text-indent: 999rem;
+        white-space: nowrap;
+    }
+    .qr-body {
+        padding: 1rem 2.5rem 2.5rem;
+    }
+    .qr-wrapper {
+        position: relative;
+        width: 70%;
+        &:after {
+            content: "";
+            background-image: url("#{$image-path}/thai-qr-logo.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 2rem;
+            display: block;
+            height: 100%;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+}
+
+.vs__dropdown-toggle {
+    padding: 0 !important;
+}
+
+.vs__dropdown-menu {
+    z-index: 2000 !important;
+    &:before {
+        content: "";
+        background-color: $gray;
+        display: block;
+        height: 1px;
+        left: 1rem;
+        position: absolute;
+        right: 1rem;
+        top: 0;
+    }
+}
+
+.vs__selected-options {
+    padding: $input-btn-padding-y 0 !important;
+    .vs__selected,
+    .vs__search {
+        font-size: $input-font-size !important;
+        line-height: $input-line-height !important;
+        margin: 0 !important;
+        padding-left: $input-padding-x !important;
+    }
+    .vs__selected {
+        color: $primary;
+        display: block !important;
+        font-weight: $input-font-weight;
+        margin: 0 !important;
+        max-width: 100%;
+        opacity: 1 !important;
+        overflow: hidden;
+        position: absolute !important;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &~.vs__search {
+            max-width: 1%;
+        }
+    }
+    .vs__search {
+        color: $gray !important;
+        margin: 0 !important;
+    }
+}
+
+.vs__dropdown-option {
+    white-space: normal !important;
+}

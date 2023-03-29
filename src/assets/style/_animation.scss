@@ -1,0 +1,36 @@
+.slide-enter-active {
+    transition: max-height 1.5s cubic-bezier(0.52, 0.16, 0.24, 1);
+}
+
+.slide-leave-active {
+    transition: max-height 0.3s cubic-bezier(0.52, 0.16, 0.24, 1);
+}
+
+.slide-enter-to,
+.slide-leave-from {
+    max-height: 9999px;
+    overflow: hidden;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.slide-up-enter-active {
+    animation: slide-up-in 0.15s ease-out both;
+}
+
+.slide-up-leave-active {
+    animation: slide-up-in 0.15s reverse ease-in both;
+}
+
+@keyframes slide-up-in {
+    0% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

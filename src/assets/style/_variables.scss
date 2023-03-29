@@ -1,0 +1,53 @@
+$primary: #0058a7;
+$secondary: #BBDEFF;
+$light-blue: #00ADEE;
+$blue-pale: #DBF4FF;
+$green: #CBD300;
+$gray: #AAAAAA;
+$white: #ffffff;
+$danger: #dc3545;
+$black: #000000;
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "light-blue": $light-blue,
+    "green": $green,
+    "gray": $gray,
+    "danger": $danger
+);
+
+$font-path: "./fonts" !default;
+$image-path: "./img" !default;
+
+$font-size-base: 1.0625rem;
+$font-family-sans-serif:
+    // BLA Default family
+    "DB Heavent",
+    // Safari for OS X and iOS (San Francisco)
+    -apple-system,
+    // Chrome < 56 for OS X (San Francisco)
+    BlinkMacSystemFont,
+    // Windows
+    "Segoe UI",
+    // Android
+    "Roboto",
+    // Basic web fallback
+    "Helvetica Neue",
+    Arial, sans-serif,
+    // Emoji fonts
+    "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+// Input
+$input-color: $primary;
+$input-border-radius: 4px;
+$input-font-weight: 700;
+$form-feedback-icon-invalid: "";
+$input-padding-x: 1rem;
+
+// Button
+$btn-font-weight: 700;
+$btn-font-size: 18px;
+
+// Header
+$header-height: 57px;
